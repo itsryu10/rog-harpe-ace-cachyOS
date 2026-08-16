@@ -28,3 +28,18 @@ echo 'SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0b05", MODE="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0b05", MODE="0666"' | sudo tee /etc/udev/rules.d/99-rog-harpe.rules
 
 sudo udevadm control --reload-rules && sudo udevadm trigger
+
+git clone https://github.com/itsryu10/rog-harpe-ace-linux.git
+cd rog-harpe-ace-linux
+pip install customtkinter hid
+python gui_harpe.py
+
+📦 Standalone Executable
+
+You can also download the pre-compiled binary executable directly from the Releases section without needing Python installed.
+🤝 Contributing
+
+Contributions, bug reports, and feature requests are welcome! Feel free to open an Issue or Pull Request.
+📜 License
+
+Distributed under the MIT License.
